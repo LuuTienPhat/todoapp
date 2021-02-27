@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+* {
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-webkit-scrollbar {
+  width: 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  height: 500px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 2px solid black;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 20px;
+  margin: 0 0 20px 0;
+}
+
+.form {
+  width: 100%;
+  height: 2.5rem;
+  margin: 0 0 20px 0;
+
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.form-input {
+  width: 100%;
+  height: inherit;
+  margin: 0 10px 0 0;
+  padding: 10px;
+}
+
+.form-btn {
+  height: inherit;
+  width: 6rem;
+  background-color: gray;
   color: white;
+  outline: none;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-table {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-row {
+  width: inherit;
+  height: auto;
+  border: 1px solid grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 10px;
+  margin: 0 0 10px 0;
+  padding: 10px;
+}
+
+.todo-row.complete {
+  opacity: 0.3;
+}
+
+.todo-text {
+  width: 85%;
+  height: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.todo-text span {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0 20px 0 0;
+}
+
+.todo-text div {
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: auto;
+  word-break: break-all;
+}
+
+.icons {
+  width: 15%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.icons svg:first-child {
+  margin: 0 10px 0 0;
 }
