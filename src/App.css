@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
 
 * {
   font-family: "Roboto Mono", monospace;
@@ -54,6 +54,13 @@ body {
   height: inherit;
   margin: 0 10px 0 0;
   padding: 10px;
+
+  border: 1px solid grey;
+  outline: none;
+}
+
+.form-input:focus {
+  border: 1px solid black;
 }
 
 .form-btn {
@@ -81,7 +88,7 @@ body {
   padding: 0 10px;
   border-radius: 10px;
   margin: 0 0 10px 0;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 .todo-row.complete {
@@ -96,6 +103,8 @@ body {
   justify-content: flex-start;
   align-items: center;
   cursor: pointer;
+
+  margin: 10px;
 }
 
 .todo-text span {
@@ -119,6 +128,8 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  cursor: pointer;
 }
 
 .line-through {
@@ -127,4 +138,14 @@ body {
 
 .icons svg:first-child {
   margin: 0 10px 0 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    padding: 0 20px;
+  }
+
+  .App {
+    width: 100%;
+  }
 }
