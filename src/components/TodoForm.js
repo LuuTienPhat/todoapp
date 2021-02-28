@@ -25,10 +25,11 @@ function TodoForm(props) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="form">
+    <form onSubmit={handleSubmit} className="form" autoComplete="off">
       {!props.edit ? (
         <>
           <input
+            autoComplete="off"
             type="text"
             name="text"
             placeholder="Add a todo"
